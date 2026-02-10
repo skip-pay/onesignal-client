@@ -4,15 +4,15 @@ with open('README.md', 'r') as f:
     long_description = f.read()
 
 setuptools.setup(
-    name='onesignal-client',
-    version='0.0.1',
-    url='https://github.com/radimsuckr/onesignal-client',
+    name='skip-onesignal-client',
+    version='0.1.0',
+    url='https://github.com/skip-pay/onesignal-client',
     description='OneSignal API wrapper',
     long_description=long_description,
     long_description_content_type='text/markdown',
     license='MIT',
-    author='Radim Sückr',
-    author_email='contact@radimsuckr.cz',
+    author='Radim Sückr, Skip Pay Developers',
+    author_email='developers@skippay.cz',
     packages=['onesignal'],
     install_requires=['requests'],
     classifiers=[
