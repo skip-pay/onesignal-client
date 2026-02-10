@@ -5,7 +5,7 @@ with open('README.md', 'r') as f:
 
 setuptools.setup(
     name='skip-onesignal-client',
-    version='0.1.0',
+    version='0.1.1',
     url='https://github.com/skip-pay/onesignal-client',
     description='OneSignal API wrapper',
     long_description=long_description,

@@ -30,12 +30,14 @@ class OneSignalClient:
         app_id: OneSignal app id
         rest_api_key: secret OneSignal rest api key
     """
-    def __init__(self, app_id, rest_api_key, base_api_url="https://onesignal.com/api/v1/"):
+    DEFAULT_BASE_API_URL = "https://onesignal.com/api/v1/"
+
+    def __init__(self, app_id, rest_api_key, base_api_url=None, requests_session=None):
         """Inits OneSignal with connection details"""
         self.app_id = app_id
-        self.base_api_url = base_api_url
+        self.base_api_url = base_api_url or self.DEFAULT_BASE_API_URL
         self.rest_api_key = rest_api_key
-        self.session = requests.session()
+        self.session = requests_session or requests.session()
 
     def request(self, method, endpoint, json={}):
         """Sends a request to the OneSignal API
